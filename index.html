@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branding, Design &amp; Webflow Development | Studio Namma</title>
+  <meta name="description" content="At Studio Namma, we think, craft, and design bold websites for ambitious brands. We’re experts in branding, creative design, and Webflow development." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lenis CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="home">
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader_content">
+      <div class="preloader_logo">STUDIO NAMMA</div>
+      <div class="preloader_bar"><div class="preloader_progress" id="preloaderProgress"></div></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor follower -->
+  <div class="custom-cursor" id="customCursor">
+    <span class="cursor-text" id="cursorText"></span>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="nav-top">
+    <div class="padding-global">
+      <div class="container-nav">
+        <div class="nav-top_component">
+          <div class="nav-top_left">
+            <a href="#" class="link is-mono brand-logo" data-cursor="Home">
+              <span class="text-mono">Studio Namma</span>
+            </a>
+            <div id="modeSwitch" class="link is-mono mode-switch-btn" data-cursor="Toggle Theme">
+              <span class="text-mono" id="modeSwitchText">Dark mode</span>
+            </div>
+          </div>
+          
+          <div class="nav-top_middle">
+            <div id="menuToggle" class="link is-mono menu-toggle-btn" data-cursor="Menu">
+              <span class="text-mono" id="menuToggleText">Menu</span>
+            </div>
+          </div>
+
+          <div class="nav-top_right">
+            <div id="openContactHeader" class="link is-mono contact-open-btn" data-cursor="Talk">
+              <span class="text-mono">Let's talk!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bottom Navigation Ticker -->
+  <nav class="nav-bottom">
+    <div class="padding-global is-nav">
+      <div class="container-nav">
+        <div class="nav-bottom_component">
+          <div class="nav-bottom_left hide-tablet">
+            <span class="text-mono">We craft bold design &amp; clean Webflow.</span>
+          </div>
+          <div class="nav-bottom_right">
+            <div class="cities_list">
+              <div class="city_wrapper">
+                <span class="text-mono city-name">Paris, France</span>
+                <span class="text-mono city-time" id="timeParis">--:--</span>
+              </div>
+              <div class="city_wrapper">
+                <span class="text-mono city-name">Los Angeles, CA</span>
+                <span class="text-mono city-time" id="timeLA">--:--</span>
+              </div>
+              <div class="city_wrapper">
+                <span class="text-mono city-name">Barcelona, Spain</span>
+                <span class="text-mono city-time" id="timeBarcelona">--:--</span>
+              </div>
+              <div class="city_wrapper">
+                <span class="text-mono city-name">Hong Kong, China</span>
+                <span class="text-mono city-time" id="timeHK">--:--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 3D Overlay Full-Screen Menu -->
+  <section class="nav-menu" id="navMenu">
+    <div class="padding-global height-100">
+      <div class="container-nav height-100">
+        <div class="nav-menu_component">
+          <div class="nav-menu_col">
+            <a href="#hero-section" class="nav-menu_link_wrapper menu-close-trigger" data-cursor="View">
+              <div class="nav-menu_visual is-home"></div>
+              <span class="nav-menu_link">Home</span>
+            </a>
+            <a href="#projects-section" class="nav-menu_link_wrapper menu-close-trigger" data-cursor="View">
+              <div class="nav-menu_visual is-work"></div>
+              <span class="nav-menu_link">Work</span>
+            </a>
+            <a href="#services-section" class="nav-menu_link_wrapper menu-close-trigger" data-cursor="View">
+              <div class="nav-menu_visual is-services"></div>
+              <span class="nav-menu_link">Services</span>
+            </a>
+            <a href="#intro-section" class="nav-menu_link_wrapper menu-close-trigger" data-cursor="View">
+              <div class="nav-menu_visual is-approach"></div>
+              <span class="nav-menu_link">Approach</span>
+            </a>
+          </div>
+          <div class="nav-menu_col">
+            <a href="#clients-section" class="nav-menu_link_wrapper menu-close-trigger" data-cursor="View">
+              <div class="nav-menu_visual is-studio"></div>
+              <span class="nav-menu_link">Studio</span>
+            </a>
+            <a href="#cta-section" class="nav-menu_link_wrapper menu-close-trigger" data-cursor="View">
+              <div class="nav-menu_visual is-pack"></div>
+              <span class="nav-menu_link">Plans</span>
+            </a>
+            <a href="#footer-section" class="nav-menu_link_wrapper menu-close-trigger" data-cursor="View">
+              <div class="nav-menu_visual is-resources"></div>
+              <span class="nav-menu_link">News</span>
+            </a>
+            <div class="nav-menu_link_wrapper contact-trigger-menu" id="menuContactBtn" data-cursor="Contact">
+              <span class="nav-menu_link is-contact">Let's talk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide-Down Contact Form Overlay Modal -->
+  <section class="section_contact" id="contactOverlay">
+    <div class="contact_background"></div>
+    <div class="padding-global z-index-1 height-100">
+      <div class="container-large height-100">
+        <div class="contact_component">
+          <div class="contact_top">
+            <div id="closeContactBtn" class="link close-btn" data-cursor="Close">
+              <span class="text-mono">[ Close ]</span>
+            </div>
+          </div>
+          
+          <div class="contact_form-block">
+            <form id="contactForm" class="contact_form">
+              <h2 class="heading-style-h2 contact-heading">
+                Let's work<br/><span class="contact_visual_dot"></span>together
+              </h2>
+
+              <div class="contact_rows">
+                <div class="contact_row">
+                  <label for="name" class="text-mono is-smaller">Name</label>
+                  <input type="text" id="name" name="name" class="contact_field" placeholder="Chuck Norris" required />
+                </div>
+                
+                <div class="contact_row">
+                  <label for="email" class="text-mono is-smaller">Email</label>
+                  <input type="email" id="email" name="email" class="contact_field" placeholder="walker@texas-rangers.com" required />
+                </div>
+                
+                <div class="contact_row">
+                  <label for="phone" class="text-mono is-smaller">Phone</label>
+                  <input type="tel" id="phone" name="phone" class="contact_field" placeholder="+33 7 80 97 92 69" />
+                </div>
+
+                <div class="contact_row">
+                  <label class="text-mono is-smaller">Interest</label>
+                  <div class="contact_radio_wrapper">
+                    <label class="contact_radio">
+                      <input type="radio" name="interest" value="Design" checked />
+                      <span class="radio_custom"></span>
+                      <span class="contact_radio_label">Design</span>
+                    </label>
+                    <label class="contact_radio">
+                      <input type="radio" name="interest" value="Dev" />
+                      <span class="radio_custom"></span>
+                      <span class="contact_radio_label">Webflow development</span>
+                    </label>
+                    <label class="contact_radio">
+                      <input type="radio" name="interest" value="All" />
+                      <span class="radio_custom"></span>
+                      <span class="contact_radio_label">Full package</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="contact_row">
+                  <label for="message" class="text-mono is-smaller">Message</label>
+                  <textarea id="message" name="message" class="contact_area" placeholder="Give us a short project brief, deadline, budget, etc." required></textarea>
+                </div>
+
+                <div class="contact_footer_row">
+                  <span class="text-mono is-smaller even-smaller">
+                    By clicking on "Send", you accept our policy.
+                  </span>
+                  <button type="submit" class="contact_submit_btn" data-cursor="Submit">Send</button>
+                </div>
+              </div>
+            </form>
+
+            <div class="contact_success" id="contactSuccess">
+              <h2 class="heading-style-h2">Thank<span class="success_visual"></span>you!</h2>
+              <p class="text-mono margin-top-2">We've received your request and will get back to you within 24 hours.</p>
+              <div id="closeSuccessBtn" class="link margin-top-4" data-cursor="Close">
+                <span class="text-mono">[ Continue browsing ]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Page 3D Container Wrapper -->
+  <div class="page-wrapper" id="pageWrapper">
+    <main class="page-main" id="pageMain">
+
+      <!-- Hero Section -->
+      <section id="hero-section" class="section_hero">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="hero_component">
+              <div class="hero_heading_wrapper">
+                <h1 class="hero_h1 hero-appear">
+                  We think<br/>craft and<br/>design
+                </h1>
+              </div>
+
+              <!-- Animated Video Mask Banner inside Hero -->
+              <div class="moving-visual_wrapper">
+                <div class="moving-visual is-light">
+                  <video autoplay loop muted playsinline class="hero-bg-video">
+                    <source src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68dfa4ffe42ad829f9d5bd31_Home-Hero-lightV5-transcode.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="moving-visual is-dark">
+                  <video autoplay loop muted playsinline class="hero-bg-video">
+                    <source src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68dfa5030619737bde7460e5_Home-Hero-DK%20ModeV4-transcode.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+
+              <div class="hero_bottom">
+                <span class="text-mono scroll-hint">[ Scroll ]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Showreel Section -->
+      <section id="video-section" class="section_home-video">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="visual_wrapper grow-appear">
+              <div class="video-container">
+                <iframe src="https://player.vimeo.com/video/1127104834?background=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture" 
+                        title="Showreel_Namma"
+                        class="showreel-iframe">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro Section with Interactive Floating Images -->
+      <section id="intro-section" class="section_home-intro">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="home_intro_component">
+              <div class="home_intro_mono_wrapper">
+                <h2 class="text-mono section-label">Creative studio building premium Brands</h2>
+              </div>
+              <div class="home_intro_content_wrapper">
+                <p class="home_intro_content split-text-trigger">
+                  It’s never “just a website.”<br/>
+                  Every <span class="home_intro_hover trigger-detail" data-visual="detail">detail</span> matters.<br/>
+                  We craft digital experiences.<br/>
+                  Your design. Our obsession.<br/>
+                  Your brand. Our <span class="home_intro_hover trigger-playground" data-visual="playground">playground</span>.
+                </p>
+              </div>
+
+              <!-- Floating Pop-up Media Cards attached to hover words -->
+              <div class="hover-floating-media-card" id="hoverMediaCard">
+                <img src="" id="hoverMediaImg" alt="Preview Visual" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Projects Section -->
+      <section id="projects-section" class="section_latest">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="latest_component">
+              <div class="home_latest_heading_wrapper">
+                <div class="home_latest_heading_absolute">
+                  <h2 class="text-mono section-label">Selected projects</h2>
+                </div>
+                <div class="playground-heading-wrapper" data-cursor="Portfolio">
+                  <p class="playground-heading">Playground</p>
+                </div>
+              </div>
+
+              <div class="latest_content">
+                
+                <!-- Project Item 1 -->
+                <div class="latest_content_item project-card" data-cursor="Matera">
+                  <a href="#contactOverlay" class="latest_visual project-trigger-link">
+                    <img src="https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bb0be00336912e360b324f_main%20case%20cover%20matera%20(1).webp" alt="Matera Project" class="latest_visual_background" />
+                    <div class="latest_visual_overlay"></div>
+                    <div class="latest_visual_video_wrapper">
+                      <video class="main-video" autoplay loop muted playsinline>
+                        <source src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68dfa4ffe42ad829f9d5bd31_Home-Hero-lightV5-transcode.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="project_info_box">
+                      <h3 class="project_title">Matera</h3>
+                      <span class="text-mono project_tag">Branding &amp; Webflow</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Project Item 2 -->
+                <div class="latest_content_item project-card" data-cursor="Chance">
+                  <a href="#contactOverlay" class="latest_visual project-trigger-link">
+                    <img src="https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bae5b9f22246585fe911d0_chance-cover-desktop.webp" alt="Chance Project" class="latest_visual_background" />
+                    <div class="latest_visual_overlay"></div>
+                    <div class="latest_visual_video_wrapper">
+                      <video class="main-video" autoplay loop muted playsinline>
+                        <source src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68dfa249c8ad1d2624abf3d5_Footer-Service-designV2-transcode.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="project_info_box">
+                      <h3 class="project_title">Chance</h3>
+                      <span class="text-mono project_tag">Art Direction &amp; Web Platform</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Project Item 3 -->
+                <div class="latest_content_item project-card" data-cursor="Silvr">
+                  <a href="#contactOverlay" class="latest_visual project-trigger-link">
+                    <img src="https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68beb68ead192a24f9ad4372_silvr%20case%20cover%20(1).webp" alt="Silvr Project" class="latest_visual_background" />
+                    <div class="latest_visual_overlay"></div>
+                    <div class="latest_visual_video_wrapper">
+                      <video class="main-video" autoplay loop muted playsinline>
+                        <source src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68dfa20fc54b7796aaa5edf6_SILVR-Video%201%20footersV3-transcode.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="project_info_box">
+                      <h3 class="project_title">Silvr</h3>
+                      <span class="text-mono project_tag">Fintech Web Development</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Project Item 4 -->
+                <div class="latest_content_item project-card" data-cursor="Intramuros">
+                  <a href="#contactOverlay" class="latest_visual project-trigger-link">
+                    <img src="https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bb1c497ad001257f2e727f_intramuros-cover-case-home%20(1).webp" alt="Intramuros Project" class="latest_visual_background" />
+                    <div class="latest_visual_overlay"></div>
+                    <div class="latest_visual_video_wrapper">
+                      <video class="main-video" autoplay loop muted playsinline>
+                        <source src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68dfa1926bb2adbd4315d488_Zefir%20footerV2-transcode.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="project_info_box">
+                      <h3 class="project_title">Intramuros</h3>
+                      <span class="text-mono project_tag">Editorial &amp; Media</span>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section with Dynamic Hover Video Preview -->
+      <section id="services-section" class="section_home-services">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="home_services_component">
+              <div class="text-mono_wrapper">
+                <h2 class="text-mono section-label">Services</h2>
+              </div>
+              
+              <div class="home_services_list">
+                
+                <div class="service-item" data-video="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68bef694221ab31dc7a0898e_Home-artdirection-transcode.webm">
+                  <div class="service-item-left">
+                    <span class="service-title">Art direction</span>
+                  </div>
+                  <div class="service-item-right">
+                    <span class="text-mono service-tag">Storytelling</span>
+                  </div>
+                </div>
+
+                <div class="service-item" data-video="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68bef76a17912168bc67811f_Home-branding-transcode.webm">
+                  <div class="service-item-left">
+                    <span class="service-title">Branding</span>
+                  </div>
+                  <div class="service-item-right">
+                    <span class="text-mono service-tag">Identity</span>
+                  </div>
+                </div>
+
+                <div class="service-item" data-video="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68bef7ea54539b4433a39276_Webflow-home-transcode.webm">
+                  <div class="service-item-left">
+                    <span class="service-title">Webflow</span>
+                  </div>
+                  <div class="service-item-right">
+                    <span class="text-mono service-tag">Integration</span>
+                  </div>
+                </div>
+
+                <div class="service-item" data-video="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68bef86a1717db6af24e06f2_UI-UX-Home-transcode.webm">
+                  <div class="service-item-left">
+                    <span class="service-title">UI/UX Design</span>
+                  </div>
+                  <div class="service-item-right">
+                    <span class="text-mono service-tag">Wireframes</span>
+                  </div>
+                </div>
+
+                <div class="service-item" data-video="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68dfa2440a49684a10b9e055_FOOTER%20-%20BRANDINGV2-transcode.mp4">
+                  <div class="service-item-left">
+                    <span class="service-title">GSAP animations</span>
+                  </div>
+                  <div class="service-item-right">
+                    <span class="text-mono service-tag">Transitions</span>
+                  </div>
+                </div>
+
+                <div class="service-item" data-video="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68df9e1b94554da67438cec0_Ads-service-homeV3-transcode.mp4">
+                  <div class="service-item-left">
+                    <span class="service-title">Advertising</span>
+                  </div>
+                  <div class="service-item-right">
+                    <span class="text-mono service-tag">Creative Ads</span>
+                  </div>
+                </div>
+
+                <div class="service-item" data-video="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68befca9c05567e63bc4d4a0_seo%20content%20home-transcode.webm">
+                  <div class="service-item-left">
+                    <span class="service-title">SEO &amp; Content</span>
+                  </div>
+                  <div class="service-item-right">
+                    <span class="text-mono service-tag">Ranking</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Floating Video Preview modal on hover -->
+              <div class="service-floating-preview" id="servicePreviewModal">
+                <video id="servicePreviewVideo" autoplay loop muted playsinline></video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Client Logos Marquee Grid Section -->
+      <section id="clients-section" class="section_home-clients">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="home_clients_component">
+              <div class="home_clients_list">
+                <!-- Qonto Logo -->
+                <div class="client_logo_wrapper" data-cursor="Client">
+                  <svg class="client_logo" viewBox="0 0 128 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M65.8 35.2H70.6V21.6C70.6 18.4 72.9 15.8 75.9 15.8C79 15.8 81.6 18.2 81.6 21.6V35.2H86.8V21.4C86.8 15.6 82 11.1 76.8 11.1C74.8 11.1 72.4 11.8 70.6 14.2V11.6H65.8V35.2ZM114.9 11.1C107.9 11.1 102.4 16.7 102.4 23.6C102.4 30.6 107.8 35.8 114.9 35.8C122 35.8 127.5 30.6 127.5 23.6C127.5 16.7 122.2 11.1 114.9 11.1ZM18.2 0.8C8.4 0.8 0.8 8.3 0.8 18.4C0.8 28.2 8.3 35.9 18.2 35.9C28.4 35.9 35.9 28.2 35.9 18.6C35.9 8.3 28.4 0.8 18.2 0.8Z" fill="currentColor"/>
+                  </svg>
+                </div>
+
+                <!-- Matera Logo -->
+                <div class="client_logo_wrapper" data-cursor="Client">
+                  <svg class="client_logo" viewBox="0 0 162 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M64.9 5.1C61.7 5.1 59.2 7 57.9 10.4C57.7 7.6 56.8 5.1 52.3 5.1C48.9 5.1 46.3 7.1 45 10.7L44.6 5.5H40V27.1H45.2V16C45.2 14 45.8 12.2 46.8 10.9C47.8 9.6 49 8.9 50.3 8.9C52.1 8.9 52.7 9.7 52.7 12.3V27.1H57.9V16C57.9 14.1 58.4 12.3 59.5 10.9C60.4 9.6 61.7 8.9 63 8.9C64.8 8.9 65.4 9.7 65.4 12.3V27.1H70.6V11.3C70.6 8.2 69.9 5.1 64.9 5.1Z" fill="currentColor"/>
+                  </svg>
+                </div>
+
+                <!-- Chance Logo -->
+                <div class="client_logo_wrapper" data-cursor="Client">
+                  <svg class="client_logo" viewBox="0 0 160 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.8 0.5C18.1 0.5 22.2 2.6 24.7 6.2L20.2 9.9C18.9 7.6 16.4 6.2 13.8 6.2C9.7 6.3 6.4 9.7 6.4 13.9C6.4 18.2 9.6 21.7 13.7 21.8C16.4 21.8 18.9 20.4 20.2 18.1L24.7 21.8C20.4 27.9 12.2 29.3 6.1 25C0.1 20.7-1.3 12.3 2.9 6.2C5.4 2.6 9.5 0.5 13.8 0.5Z" fill="currentColor"/>
+                  </svg>
+                </div>
+
+                <!-- Silvr Logo -->
+                <div class="client_logo_wrapper" data-cursor="Client">
+                  <svg class="client_logo" viewBox="0 0 104 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M77.5 17.6V12.9H82.2C84 12.9 85 13.8 85 15.3C85 16.7 84 17.6 82.2 17.6H77.5ZM74.4 27.7H77.5V20.1L84.7 27.7H88.8L82.7 21.4C82.2 21 81.8 20.5 81.4 20.1H82.7C85.6 20.1 88.3 18.3 88.3 15.2C88.3 12.2 85.9 10.3 82.7 10.3H74.4V27.7Z" fill="currentColor"/>
+                  </svg>
+                </div>
+
+                <!-- Alan Logo -->
+                <div class="client_logo_wrapper" data-cursor="Client">
+                  <svg class="client_logo" viewBox="0 0 154 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.3 6.7C12.7 3 9.2 0.4 5.6 1.1C3 1.6 1 3.7 0.4 6.3V9.1C0.6 11.3 2.6 12.7 4.6 12.3C5.4 12.2 6 11.8 6.5 11.4C7 10.9 7.6 10.8 8.1 11.1C8.8 11.4 9.5 11.4 10.2 11.3C12.2 10.9 13.5 9 13.3 6.7ZM29.2 2C21.9 2 17.4 4.6 17.4 8.7C17.4 13.5 22 20.1 29.2 20.1C36.2 20.1 41 13.4 41 8.7C41 4.5 36.6 2 29.2 2Z" fill="currentColor"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section CTA -->
+      <section id="cta-section" class="section_cta">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="cta_component">
+              <h2 class="cta_heading">
+                Let's work<br/><span class="cta_visual_line"></span>together
+              </h2>
+              <div class="cta_content">
+                <p class="cta_p">
+                  Work with us if average isn’t your thing.<br/>
+                  Drop it, we'll build it!
+                </p>
+                <div class="small-link cta-btn-trigger" id="openContactCta" data-cursor="Talk">
+                  <span class="text-mono">say hello</span>
+                  <div class="small-link_arrow">
+                    <svg width="14" height="14" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11 1.5V2.5H12V1.5H11ZM10 0.5V1.5H11V0.5H10ZM11 6.5H12V5.5H11V6.5ZM10 7.5H11V6.5H10V7.5ZM13 3.5V2.5H12V3.5H0V4.5H12V5.5H13V4.5H14V3.5H13Z" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer id="footer-section" class="footer">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="footer_component">
+              
+              <!-- Footer Video Cards Row -->
+              <div class="footer_top">
+                <div class="footer_top_video">
+                  <video autoplay loop muted playsinline>
+                    <source src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68dfa249c8ad1d2624abf3d5_Footer-Service-designV2-transcode.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="footer_top_video">
+                  <video autoplay loop muted playsinline>
+                    <source src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68dfa1926bb2adbd4315d488_Zefir%20footerV2-transcode.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="footer_top_video">
+                  <video autoplay loop muted playsinline>
+                    <source src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68dfa2440a49684a10b9e055_FOOTER%20-%20BRANDINGV2-transcode.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="footer_top_video hide-mobile">
+                  <video autoplay loop muted playsinline>
+                    <source src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68dfa20fc54b7796aaa5edf6_SILVR-Video%201%20footersV3-transcode.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="footer_top_video hide-mobile">
+                  <video autoplay loop muted playsinline>
+                    <source src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985%2F68dfa0feb2681e0616dc3b3a_Footer-supercomics-transcode.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+
+              <!-- Footer Navigation and Links Row -->
+              <div class="footer_content">
+                <div class="footer_main">
+                  <div class="footer_menu">
+                    <div class="footer_menu_col">
+                      <a href="#hero-section" class="link is-mono-footer"><span class="text-mono">Home</span></a>
+                      <a href="#projects-section" class="link is-mono-footer"><span class="text-mono">Work</span></a>
+                      <a href="#services-section" class="link is-mono-footer"><span class="text-mono">Services</span></a>
+                      <a href="#clients-section" class="link is-mono-footer"><span class="text-mono">Studio</span></a>
+                      <a href="#cta-section" class="link is-mono-footer"><span class="text-mono">Plans</span></a>
+                    </div>
+                    <div class="footer_menu_col">
+                      <a href="https://www.youtube.com/@GabrielSchemoul" target="_blank" class="link is-mono-footer"><span class="text-mono">YouTube</span></a>
+                      <a href="https://www.linkedin.com/company/studio-namma" target="_blank" class="link is-mono-footer"><span class="text-mono">LinkedIn</span></a>
+                      <a href="https://www.instagram.com/studio.namma/" target="_blank" class="link is-mono-footer"><span class="text-mono">Instagram</span></a>
+                      <a href="#" class="link is-mono-footer"><span class="text-mono">Legal</span></a>
+                    </div>
+                  </div>
+
+                  <div class="footer_info_grid">
+                    <div class="footer_info_item">
+                      <span class="text-mono">We are a creative studio based in Paris, Barcelona &amp; London.</span>
+                    </div>
+                    <div class="footer_info_item">
+                      <span class="text-mono">Big project? Crazy thought? Or just feel like chatting?</span>
+                    </div>
+                    <div class="footer_info_item">
+                      <a href="mailto:hello@studionamma.com" class="link is-mono-footer" data-cursor="Email">
+                        <span class="text-mono">hello@studionamma.com</span>
+                      </a>
+                    </div>
+                    <div class="footer_info_item">
+                      <span class="text-mono">Copyright 2026 studio namma</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Giant Brand SVG Logo Stretching at Bottom -->
+                <div class="footer_logo_wrapper">
+                  <svg class="footer_logo_svg" viewBox="0 0 1472 475" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H121L187 393H190L173 200L167 0H256V475H135L71 79H69L82 275L90 475H0V0Z" fill="currentColor"/>
+                    <path d="M268 475L322 0H451L508 475H416L408 364H366L358 475H268ZM368 279H405L388 72H385L368 279Z" fill="currentColor"/>
+                    <path d="M520 475V0H659L678 200L690 384H692L703 200L722 0H861V475H771L775 263L784 79H782L738 475H640L597 79H594L603 263L607 475H520Z" fill="currentColor"/>
+                    <path d="M880 475V0H1019L1038 200L1050 384H1052L1063 200L1082 0H1221V475H1131L1135 263L1143 79H1141L1098 475H1000L956 79H954L963 263L967 475H880Z" fill="currentColor"/>
+                    <path d="M1232 475L1286 0H1415L1472 475H1380L1372 364H1330L1322 475H1232ZM1332 279H1369L1352 72H1349L1332 279Z" fill="currentColor"/>
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Cookie Banner -->
+  <div id="cookieBanner" class="cookie">
+    <p class="cookie_description">
+      We care about your data, and we'd use cookies only to improve your experience. By using this website, you accept our 
+      <a href="#" class="cookie_link">Cookies Policy</a>.
+    </p>
+    <div id="acceptCookie" class="small-link cookie-accept-btn" data-cursor="Accept">
+      <span class="text-mono">Accept cookies</span>
+    </div>
+  </div>
+
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script>
+  
+  <!-- Main Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
